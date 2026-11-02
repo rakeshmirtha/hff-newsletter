@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Thank You for Visiting | Hero Future Energies</title>
+    <style>
+      @font-face {
+        font-family: Montserrat;
+        src: url("assets/Montserrat.ttf") format("truetype");
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: Montserrat;
+        src: url("assets/Montserrat-Italic.ttf") format("truetype");
+        font-style: italic;
+        font-weight: 100 900;
+        font-display: swap;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+      }
+      body {
+        background: #eceeef;
+        color: #303b47;
+        font-family: Montserrat, Arial, sans-serif;
+        font-size: 10px;
+        line-height: 1.52;
+      }
+      .page {
+        width: 600px;
+        max-width: 100%;
+        min-height: 100vh;
+        margin: 0 auto;
+        background: #fff;
+        overflow: hidden;
+        box-shadow: 0 2px 24px #26364616;
+      }
+      .masthead {
+        height: 90px;
+        padding: 22px 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+      }
+      .brand-title {
+        display: flex;
+        align-items: center;
+        gap: 17px;
+        color: #425a72;
+        font-size: 18px;
+        line-height: 1.12;
+        letter-spacing: -0.35px;
+      }
+      .brand-title strong {
+        font-weight: 700;
+      }
+      .brand-bars {
+        height: 36px;
+        width: 6px;
+        display: flex;
+        flex-direction: column;
+        flex: none;
+      }
+      .brand-bars i {
+        display: block;
+        height: 25%;
+        width: 100%;
+      }
+      .brand-bars i:nth-child(1) {
+        background: #e2bd50;
+      }
+      .brand-bars i:nth-child(2) {
+        background: #93bb70;
+      }
+      .brand-bars i:nth-child(3) {
+        background: #6ab2c3;
+      }
+      .brand-bars i:nth-child(4) {
+        background: #c85558;
+      }
+      .logo {
+        display: block;
+        width: 85px;
+        height: auto;
+        object-fit: contain;
+      }
+      .hero {
+        height: 150px;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        overflow: hidden;
+      }
+      .hero .tile {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+      }
+      .hero .tile.crop-right {
+        object-position: 100% 50%;
+      }
+      .hero .tile.crop-center {
+        object-position: 50% 50%;
+      }
+      .hero-overlay {
+        position: absolute;
+        left: 0;
+        bottom: 18px;
+        width: 100%;
+        min-height: 52px;
+        padding: 13px 25px;
+        background: #334c68b8;
+        color: #fff;
+        line-height: 1.1;
+        font-size: 12px;
+      }
+      .hero-overlay b {
+        font-size: 13px;
+      }
+      .intro {
+        position: relative;
+        padding: 34px 25px 28px;
+        min-height: 246px;
+      }
+      .intro p {
+        margin: 0 0 17px;
+      }
+      .intro p:last-child {
+        margin-bottom: 0;
+      }
+      .intro .signoff {
+        margin-top: 22px;
+      }
+      .table-wrap {
+        width: 365px;
+        max-width: calc(100% - 40px);
+        margin: 0 auto;
+      }
+      .info-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        font-size: 10px;
+        line-height: 1.24;
+        background: #fff;
+      }
+      .info-table th {
+        height: 24px;
+        background: #425a74;
+        color: #fff;
+        text-align: left;
+        font-weight: 500;
+        padding: 4px 12px;
+      }
+      .info-table td {
+        height: 24px;
+        border: 1px solid #9caab2;
+        padding: 3px 12px;
+        vertical-align: middle;
+      }
+      .info-table td:first-child {
+        width: 37%;
+      }
+      .info-table .placeholder {
+        font-style: italic;
+      }
+      .section-table {
+        margin: 0 auto 12px;
+      }
+      .summary-zone {
+        position: relative;
+        padding: 0 0 30px;
+      }
+      .summary-zone:before,
+      .summary-zone:after {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        opacity: 0.65;
+        pointer-events: none;
+      }
+      .summary-zone:before {
+        left: 28px;
+        bottom: 1px;
+        width: 80px;
+        height: 120px;
+        background: linear-gradient(
+          145deg,
+          transparent 48%,
+          #eff1f1 49%,
+          #eff1f1 51%,
+          transparent 52%
+        );
+      }
+      .summary-zone .table-wrap {
+        position: relative;
+        z-index: 1;
+      }
+      .expect {
+        height: 160px;
+        background: #f5f5f5;
+        padding: 27px 25px 18px;
+        text-align: center;
+      }
+      .expect h2 {
+        margin: 0 0 25px;
+        color: #425a72;
+        font-size: 12px;
+        letter-spacing: 0.1px;
+      }
+      .expect-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2px;
+      }
+      .step {
+        color: #344a60;
+        font-size: 9px;
+        line-height: 1.15;
+      }
+      .step .circle {
+        display: grid;
+        place-items: center;
+        width: 37px;
+        height: 37px;
+        margin: 0 auto 8px;
+        border-radius: 50%;
+        background: #465e78;
+        color: #fff;
+      }
+      .step svg {
+        width: 20px;
+        height: 20px;
+        stroke: #fff;
+        fill: none;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .tables-zone {
+        padding: 30px 0 30px;
+      }
+      .safety {
+        position: relative;
+        padding: 15px 25px 0;
+        min-height: 394px;
+        background: linear-gradient(
+          to bottom,
+          #9dc36c 0,
+          #9dc36c 185px,
+          #fff 185px,
+          #fff 100%
+        );
+      }
+      .safety h2 {
+        margin: 0 0 18px;
+        color: #fff;
+        text-align: center;
+        font-size: 11px;
+      }
+      .safety-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+      .safety-card {
+        background: #f4f4f4;
+        padding: 17px 18px 16px;
+        min-height: 302px;
+      }
+      .safety-card h3 {
+        margin: 0 0 13px;
+        color: #445a70;
+        font-size: 12px;
+      }
+      .safety-item {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 11px;
+        font-size: 9.5px;
+        line-height: 1.4;
+      }
+      .safety-item:last-child {
+        margin-bottom: 0;
+      }
+      .safety-dot {
+        width: 21px;
+        height: 21px;
+        flex: none;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: #9fc66b;
+        color: #3c6077;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .contacts {
+        padding: 26px 0 0;
+      }
+      .closing {
+        padding: 31px 25px 32px;
+        min-height: 146px;
+      }
+      .closing p {
+        margin: 0 0 16px;
+      }
+      .closing strong {
+        font-weight: 700;
+      }
+      .closing em {
+        font-style: italic;
+      }
+      .color-strip {
+        display: flex;
+        width: 100%;
+        height: 10px;
+      }
+      .color-strip span {
+        width: 20%;
+      }
+      .color-strip span:nth-child(1) {
+        background: #d35657;
+      }
+      .color-strip span:nth-child(2) {
+        background: #8bcad6;
+      }
+      .color-strip span:nth-child(3) {
+        background: #465e78;
+      }
+      .color-strip span:nth-child(4) {
+        background: #96bf67;
+      }
+      .color-strip span:nth-child(5) {
+        background: #f0cc65;
+      }
+      .feedback-intro {
+        padding: 32px 25px 0;
+        min-height: 204px;
+      }
+      .feedback-intro p {
+        margin: 0 0 16px;
+      }
+      .feedback-box {
+        width: 365px;
+        max-width: calc(100% - 40px);
+        margin: 0 auto;
+        border: 1px solid #d9e2cc;
+      }
+      .feedback-box .bar {
+        height: 24px;
+        background: #9bc469;
+        color: #fff;
+        padding: 4px 12px;
+        font-size: 10px;
+      }
+      .feedback-body {
+        height: 120px;
+        padding: 21px 16px;
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+      }
+      .feedback-copy {
+        width: 225px;
+      }
+      .feedback-copy strong {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 10px;
+        line-height: 1.25;
+      }
+      .feedback-copy p {
+        margin: 0;
+        font-size: 9.8px;
+        line-height: 1.4;
+      }
+      .feedback-qr {
+        text-align: center;
+        font-size: 6px;
+        line-height: 1.25;
+      }
+      .feedback-qr img {
+        display: block;
+        width: 66px;
+        height: 66px;
+        margin: 4px auto 0;
+      }
+      .thanks-closing {
+        padding: 30px 25px 0;
+        min-height: 156px;
+      }
+      .thanks-closing p {
+        margin: 0 0 15px;
+      }
+      .landscape-footer {
+        position: relative;
+        height: 180px;
+        background: #55728b url("assets/solar-panorama.png") center center/cover
+          no-repeat;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        gap: 18px;
+      }
+      .landscape-footer:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: #314d68ad;
+      }
+      .landscape-footer > * {
+        position: relative;
+      }
+      .wind-mark {
+        font-size: 62px;
+        line-height: 1;
+        color: #fff;
+      }
+      .landscape-footer strong {
+        font-size: 16px;
+        line-height: 1.12;
+        letter-spacing: -0.25px;
+      }
+      .landscape-footer .solar-mark {
+        display: inline-block;
+        transform: skew(-15deg);
+        font-size: 31px;
+        margin-left: 6px;
+      }
+      @media (max-width: 600px) {
+        body {
+          background: #fff;
+        }
+        .page {
+          box-shadow: none;
+        }
+        .masthead {
+          padding-left: 4.2%;
+          padding-right: 4.2%;
+        }
+        .hero .tile {
+          min-width: 0;
+        }
+        .intro,
+        .feedback-intro,
+        .closing,
+        .thanks-closing {
+          padding-left: 4.2%;
+          padding-right: 4.2%;
+        }
+        .expect {
+          padding-left: 4.2%;
+          padding-right: 4.2%;
+        }
+        .safety {
+          padding-left: 4.2%;
+          padding-right: 4.2%;
+        }
+      }
+      .hero .tile.crop-left {
+        object-position: 0 50%;
+      }
+      .summary-zone {
+        padding: 0 0 29px;
+      }
+      .summary-zone .section-table {
+        margin-bottom: 0;
+      }
+      .upcoming .intro {
+        min-height: 170px;
+        padding-bottom: 25px;
+      }
+      .visit .summary-zone {
+        padding-top: 13px;
+      }
+      .visit .hero-overlay {
+        width: 66.6667%;
+      }
+      .thanks .hero-overlay {
+        width: 33.3333%;
+      }
+      .tables-zone {
+        padding-bottom: 20px;
+      }
+      .safety {
+        min-height: 371px;
+      }
+      .upcoming .safety {
+        min-height: 280px;
+      }
+      .upcoming .safety-card {
+        min-height: 210px;
+      }
+      .closing {
+        padding-top: 24px;
+      }
+      .visit .closing {
+        padding-bottom: 9px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page thanks">
+      <header class="masthead">
+        <div class="brand-title">
+          <span class="brand-bars" aria-hidden="true"
+            ><i></i><i></i><i></i><i></i></span
+          ><span>Your Visit at<br /><strong>Hero Future Energies</strong></span>
+        </div>
+        <img
+          class="logo"
+          src="assets/logo.png"
+          alt="Hero Future Energies — planet positive power"
+        />
+      </header>
+      <div class="hero">
+        <img
+          class="tile"
+          src="assets/storage.jpg"
+          alt="Energy storage site"
+        /><img
+          class="tile crop-left"
+          src="assets/wind-construction.png"
+          alt="Wind turbine construction"
+        /><img
+          class="tile crop-center"
+          src="assets/wind-construction.png"
+          alt="Solar and wind energy site"
+        />
+        <div class="hero-overlay">
+          Thank You for<br /><b>Visiting Hero Future Energies</b>
+        </div>
+      </div>
+      <section class="feedback-intro">
+        <p>Dear [Visitor Name],</p>
+        <p>
+          Thank you for taking the time to visit Hero Future Energies and
+          <em>[Site Name]</em>. It was a pleasure hosting you, and we hope your
+          visit offered valuable insights into our people, our operations and
+          our commitment to powering a cleaner, more sustainable future through
+          innovation, operational excellence and responsible growth.
+        </p>
+        <p>
+          We hope you enjoyed the experience and the opportunity to see our work
+          firsthand, interact with our team and learn more about the journey we
+          are undertaking to create a positive impact through clean energy.
+        </p>
+      </section>
+      <section class="feedback-box">
+        <div class="bar">WE'D LOVE YOUR FEEDBACK</div>
+        <div class="feedback-body">
+          <div class="feedback-copy">
+            <strong>Your experience<br />matters to us.</strong>
+            <p>
+              Your feedback will help us continuously enhance the visitor
+              experience across Hero Future Energies.
+            </p>
+          </div>
+          <div class="feedback-qr">
+            Scan to share your<br />feedback.<br />Or click here [Link]<img
+              src="assets/feedback-qr.png"
+              alt="Feedback QR code"
+            />
+          </div>
+        </div>
+      </section>
+      <div class="thanks-closing">
+        <p>
+          <strong
+            >Thank you once again for visiting Hero Future Energies.</strong
+          ><br />We look forward to staying connected and welcoming you again in
+          the future.
+        </p>
+        <p>
+          Warm regards,<br /><em>[Host Name]</em><br /><em>[Designation]</em>
+        </p>
+      </div>
+      <footer class="landscape-footer">
+        <svg
+          width="92"
+          height="72"
+          viewBox="0 0 92 72"
+          aria-hidden="true"
+          style="flex: none"
+        >
+          <g
+            fill="none"
+            stroke="#fff"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke-width="2.7" d="M29 69 31 30" />
+            <circle cx="31" cy="27" r="3" fill="#fff" />
+            <path
+              stroke-width="2.4"
+              d="M31 24 23 3 29 8 34 24M34 27 61 21 54 26 34 30M29 29 10 48 14 40 27 26"
+            />
+            <path stroke-width="1.2" d="M58 55 54 69M74 55 78 69" />
+          </g>
+          <g fill="#fff">
+            <path
+              d="m51 43 14-2-6 8-14 2zM67 40l15-2-6 8-15 2zM43 53l15-2-6 8-15 2zM61 50l15-2-6 8-15 2z"
+            />
+          </g></svg
+        ><strong>Powering a<br />cleaner, more<br />sustainable future</strong>
+      </footer>
+      <div class="color-strip" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </main>
+  </body>
+</html>
