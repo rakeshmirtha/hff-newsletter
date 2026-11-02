@@ -1,849 +1,251 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="format-detection" content="date=no,address=no,email=no" />
+    <meta name="color-scheme" content="light" />
+    <meta name="supported-color-schemes" content="light" />
     <title>Your Upcoming Visit | Hero Future Energies</title>
+    <!--[if mso]>
+      <noscript><xml><o:OfficeDocumentSettings><o:AllowPNG /><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+      <style>
+        body, table, td, p, a, span, strong, em { font-family: Arial, sans-serif !important; }
+        td { mso-line-height-rule: exactly; }
+              </style>
+    <![endif]-->
+    <!--[if !mso]><!-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet" />
+    <!--<![endif]-->
     <style>
-      @font-face {
-        font-family: Montserrat;
-        src: url("assets/Montserrat.ttf") format("truetype");
-        font-style: normal;
-        font-weight: 100 900;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: Montserrat;
-        src: url("assets/Montserrat-Italic.ttf") format("truetype");
-        font-style: italic;
-        font-weight: 100 900;
-        font-display: swap;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        margin: 0;
-      }
-      
-      body {
-        background: #eceeef;
-        color: #303b47;
-        font-family: Montserrat, Arial, sans-serif;
-        font-size: 10px;
-        line-height: 1.52;
-      }
-      .page {
-        width: 600px;
-        max-width: 100%;
-        min-height: 100vh;
-        margin: 0 auto;
-        background: #fff;
-        overflow: hidden;
-        box-shadow: 0 2px 24px #26364616;
-      }
-      .masthead {
-        height: 90px;
-        padding: 22px 25px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background: #fff;
-      }
-      .brand-title {
-        display: flex;
-        align-items: center;
-        gap: 17px;
-        color: #425a72;
-        font-size: 18px;
-        line-height: 1.12;
-        letter-spacing: -0.35px;
-      }
-      .brand-title strong {
-        font-weight: 700;
-      }
-      .brand-bars {
-        height: 36px;
-        width: 6px;
-        display: flex;
-        flex-direction: column;
-        flex: none;
-      }
-      .brand-bars i {
-        display: block;
-        height: 25%;
-        width: 100%;
-      }
-      .brand-bars i:nth-child(1) {
-        background: #e2bd50;
-      }
-      .brand-bars i:nth-child(2) {
-        background: #93bb70;
-      }
-      .brand-bars i:nth-child(3) {
-        background: #6ab2c3;
-      }
-      .brand-bars i:nth-child(4) {
-        background: #c85558;
-      }
-      .logo {
-        display: block;
-        width: 85px;
-        height: auto;
-        object-fit: contain;
-      }
-      .hero {
-        height: 150px;
-        position: relative;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        overflow: hidden;
-      }
-      .hero .tile {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-      }
-      .hero .tile.crop-right {
-        object-position: 100% 50%;
-      }
-      .hero .tile.crop-center {
-        object-position: 50% 50%;
-      }
-      .hero-overlay {
-        position: absolute;
-        left: 0;
-        bottom: 18px;
-        width: 100%;
-        min-height: 52px;
-        padding: 13px 25px;
-        background: #334c68b8;
-        color: #fff;
-        line-height: 1.1;
-        font-size: 12px;
-      }
-      .hero-overlay b {
-        font-size: 13px;
-      }
-      .intro {
-        position: relative;
-        padding: 34px 25px 28px;
-        min-height: 246px;
-      }
-      .intro p {
-        margin: 0 0 17px;
-      }
-      .intro p:last-child {
-        margin-bottom: 0;
-      }
-      .intro .signoff {
-        margin-top: 22px;
-      }
-      .table-wrap {
-        width: 365px;
-        max-width: calc(100% - 40px);
-        margin: 0 auto;
-      }
-      .info-table {
-        width: 100%;
-        border-collapse: collapse;
-        table-layout: fixed;
-        font-size: 10px;
-        line-height: 1.24;
-        background: #fff;
-      }
-      .info-table th {
-        height: 24px;
-        background: #425a74;
-        color: #fff;
-        text-align: left;
-        font-weight: 500;
-        padding: 4px 12px;
-      }
-      .info-table td {
-        height: 24px;
-        border: 1px solid #9caab2;
-        padding: 3px 12px;
-        vertical-align: middle;
-      }
-      .info-table td:first-child {
-        width: 37%;
-      }
-      .info-table .placeholder {
-        font-style: italic;
-      }
-      .section-table {
-        margin: 0 auto 12px;
-      }
-      .summary-zone {
-        position: relative;
-        padding: 0 0 30px;
-      }
-      .summary-zone:before,
-      .summary-zone:after {
-        content: "";
-        position: absolute;
-        z-index: 0;
-        opacity: 0.65;
-        pointer-events: none;
-      }
-      .summary-zone:before {
-        left: 28px;
-        bottom: 1px;
-        width: 80px;
-        height: 120px;
-        background: linear-gradient(
-          145deg,
-          transparent 48%,
-          #eff1f1 49%,
-          #eff1f1 51%,
-          transparent 52%
-        );
-      }
-      .summary-zone .table-wrap {
-        position: relative;
-        z-index: 1;
-      }
-      .expect {
-        height: 160px;
-        background: #f5f5f5;
-        padding: 27px 25px 18px;
-        text-align: center;
-      }
-      .expect h2 {
-        margin: 0 0 25px;
-        color: #425a72;
-        font-size: 12px;
-        letter-spacing: 0.1px;
-      }
-      .expect-grid {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 2px;
-      }
-      .step {
-        color: #344a60;
-        font-size: 9px;
-        line-height: 1.15;
-      }
-      .step .circle {
-        display: grid;
-        place-items: center;
-        width: 37px;
-        height: 37px;
-        margin: 0 auto 8px;
-        border-radius: 50%;
-        background: #465e78;
-        color: #fff;
-      }
-      .step svg {
-        width: 20px;
-        height: 20px;
-        stroke: #fff;
-        fill: none;
-        stroke-width: 1.8;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-      }
-      .tables-zone {
-        padding: 30px 0 30px;
-      }
-      .safety {
-        position: relative;
-        padding: 15px 25px 0;
-        min-height: 394px;
-        background: linear-gradient(
-          to bottom,
-          #9dc36c 0,
-          #9dc36c 185px,
-          #fff 185px,
-          #fff 100%
-        );
-      }
-      .safety h2 {
-        margin: 0 0 18px;
-        color: #fff;
-        text-align: center;
-        font-size: 11px;
-      }
-      .safety-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 18px;
-      }
-      .safety-card {
-        background: #f4f4f4;
-        padding: 17px 18px 16px;
-        min-height: 302px;
-      }
-      .safety-card h3 {
-        margin: 0 0 13px;
-        color: #445a70;
-        font-size: 12px;
-      }
-      .safety-item {
-        display: flex;
-        gap: 12px;
-        margin-bottom: 11px;
-        font-size: 9.5px;
-        line-height: 1.4;
-      }
-      .safety-item:last-child {
-        margin-bottom: 0;
-      }
-      .safety-dot {
-        width: 21px;
-        height: 21px;
-        flex: none;
-        display: grid;
-        place-items: center;
-        border-radius: 50%;
-        background: #9fc66b;
-        color: #3c6077;
-        font-size: 13px;
-        font-weight: 700;
-      }
-      .contacts {
-        padding: 26px 0 0;
-      }
-      .closing {
-        padding: 31px 25px 32px;
-        min-height: 146px;
-      }
-      .closing p {
-        margin: 0 0 16px;
-      }
-      .closing strong {
-        font-weight: 700;
-      }
-      .closing em {
-        font-style: italic;
-      }
-      .color-strip {
-        display: flex;
-        width: 100%;
-        height: 10px;
-      }
-      .color-strip span {
-        width: 20%;
-      }
-      .color-strip span:nth-child(1) {
-        background: #d35657;
-      }
-      .color-strip span:nth-child(2) {
-        background: #8bcad6;
-      }
-      .color-strip span:nth-child(3) {
-        background: #465e78;
-      }
-      .color-strip span:nth-child(4) {
-        background: #96bf67;
-      }
-      .color-strip span:nth-child(5) {
-        background: #f0cc65;
-      }
-      .feedback-intro {
-        padding: 32px 25px 0;
-        min-height: 204px;
-      }
-      .feedback-intro p {
-        margin: 0 0 16px;
-      }
-      .feedback-box {
-        width: 365px;
-        max-width: calc(100% - 40px);
-        margin: 0 auto;
-        border: 1px solid #d9e2cc;
-      }
-      .feedback-box .bar {
-        height: 24px;
-        background: #9bc469;
-        color: #fff;
-        padding: 4px 12px;
-        font-size: 10px;
-      }
-      .feedback-body {
-        height: 120px;
-        padding: 21px 16px;
-        display: flex;
-        justify-content: space-between;
-        gap: 15px;
-      }
-      .feedback-copy {
-        width: 225px;
-      }
-      .feedback-copy strong {
-        display: block;
-        margin-bottom: 10px;
-        font-size: 10px;
-        line-height: 1.25;
-      }
-      .feedback-copy p {
-        margin: 0;
-        font-size: 9.8px;
-        line-height: 1.4;
-      }
-      .feedback-qr {
-        text-align: center;
-        font-size: 6px;
-        line-height: 1.25;
-      }
-      .feedback-qr img {
-        display: block;
-        width: 66px;
-        height: 66px;
-        margin: 4px auto 0;
-      }
-      .thanks-closing {
-        padding: 30px 25px 0;
-        min-height: 156px;
-      }
-      .thanks-closing p {
-        margin: 0 0 15px;
-      }
-      .landscape-footer {
-        position: relative;
-        height: 180px;
-        background: #55728b;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: left;
-        gap: 18px;
-      }
-      .landscape-footer:before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: #314d68ad;
-      }
-      .landscape-footer > * {
-        position: relative;
-      }
-      .wind-mark {
-        font-size: 62px;
-        line-height: 1;
-        color: #fff;
-      }
-      .landscape-footer strong {
-        font-size: 16px;
-        line-height: 1.12;
-        letter-spacing: -0.25px;
-      }
-      .landscape-footer .solar-mark {
-        display: inline-block;
-        transform: skew(-15deg);
-        font-size: 31px;
-        margin-left: 6px;
-      }
-      @media (max-width: 600px) {
-        body {
-          background: #fff;
-        }
-        .page {
-          box-shadow: none;
-        }
-        .masthead {
-          padding-left: 4.2%;
-          padding-right: 4.2%;
-        }
-        .hero .tile {
-          min-width: 0;
-        }
-        .intro,
-        .feedback-intro,
-        .closing,
-        .thanks-closing {
-          padding-left: 4.2%;
-          padding-right: 4.2%;
-        }
-        .expect {
-          padding-left: 4.2%;
-          padding-right: 4.2%;
-        }
-        .safety {
-          padding-left: 4.2%;
-          padding-right: 4.2%;
-        }
-      }
-      .hero .tile.crop-left {
-        object-position: 0 50%;
-      }
-      .summary-zone {
-        padding: 0 0 29px;
-      }
-      .summary-zone .section-table {
-        margin-bottom: 0;
-      }
-      .upcoming .intro {
-        min-height: 170px;
-        padding-bottom: 25px;
-      }
-      .visit .summary-zone {
-        padding-top: 13px;
-      }
-      .visit .hero-overlay {
-        width: 66.6667%;
-      }
-      .thanks .hero-overlay {
-        width: 33.3333%;
-      }
-      .tables-zone {
-        padding-bottom: 20px;
-      }
-      .safety {
-        min-height: 371px;
-      }
-      .upcoming .safety {
-        min-height: 280px;
-      }
-      .upcoming .safety-card {
-        min-height: 210px;
-      }
-      .closing {
-        padding-top: 24px;
-      }
-      .visit .closing {
-        padding-bottom: 9px;
-      }
-      .step .circle img {
-        display: block;
-        width: 37px;
-        height: 37px;
-        border-radius: 50%;
-      }
-      .safety-dot img {
-        display: block;
-        width: 21px;
-        height: 21px;
-        border-radius: 50%;
-      }
-      .summary-zone:before {
-        left: 0;
-        bottom: 0;
-        width: 116px;
-        height: 121px;
-        background: url("assets/wind-watermark.png") 0 0/100% 100% no-repeat;
-        opacity: 1;
-      }
-      .summary-zone:after {
-        right: 0;
-        bottom: 0;
-        width: 120px;
-        height: 62px;
-        background: url("assets/brand-watermark.png") 0 0/100% 100% no-repeat;
-        opacity: 1;
+      html, body { margin: 0 !important; padding: 0 !important; width: 100% !important; }
+      body { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+      table { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+      img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
+      a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font: inherit !important; }
+      u + #body a { color: inherit; text-decoration: none; font: inherit; }
+      @media only screen and (max-width: 620px) {
+        .container { width: 100% !important; }
+        .px { padding-left: 16px !important; padding-right: 16px !important; }
+        .fluid { width: 100% !important; max-width: 100% !important; }
+        .hide-sm { display: none !important; }
+        .stack { display: block !important; width: 100% !important; height: auto !important; box-sizing: border-box; }
+        .stack-gap { display: block !important; width: 100% !important; height: 16px !important; }
+        .text-sm { font-size: 13px !important; line-height: 1.5 !important; }
+        .text-xs { font-size: 12px !important; }
+      }
+      @media only screen and (max-width: 360px) {
+        .step { display: inline-block !important; width: 32% !important; padding-bottom: 14px !important; }
       }
     </style>
   </head>
-  <body>
-    <main class="page upcoming">
-      <header class="masthead">
-        <div class="brand-title">
-          <span class="brand-bars" aria-hidden="true"
-            ><i></i><i></i><i></i><i></i></span
-          ><span>Your Visit at<br /><strong>Hero Future Energies</strong></span>
-        </div>
-        <img
-          class="logo"
-          src="assets/logo.png"
-          alt="Hero Future Energies — planet positive power"
-        />
-      </header>
-      <div class="hero">
-        <img
-          class="tile"
-          src="assets/storage.jpg"
-          alt="Energy storage site"
-        /><img
-          class="tile crop-center"
-          src="assets/solar-wind.png"
-          alt="Solar and wind energy facility"
-        /><img
-          class="tile"
-          src="assets/hydrogen.jpg"
-          alt="Hydrogen and solar facility"
-        />
-      </div>
-      <section class="intro">
-        <p>Dear [Visitor Name],</p>
-        <p>
-          Your visit to <em>[Site Name]</em> is just around the corner, and we
-          are delighted to welcome you. We are pleased to confirm that all
-          arrangements have been made to ensure a safe, comfortable and engaging
-          experience.
-        </p>
-        <p>
-          This brief contains everything you need to know before your arrival,
-          including your visit schedule, travel and logistics, site information,
-          safety guidelines and key contacts.
-        </p>
-      </section>
-      <div class="summary-zone">
-        <div class="table-wrap section-table">
-          <table class="info-table">
-            <thead>
-              <tr>
-                <th colspan="2">Visit Summary</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Date</td>
-                <td class="placeholder">[Date]</td>
-              </tr>
-              <tr>
-                <td>Site</td>
-                <td class="placeholder">[Site Name]</td>
-              </tr>
-              <tr>
-                <td>Location</td>
-                <td class="placeholder">[Location]</td>
-              </tr>
-              <tr>
-                <td>Host</td>
-                <td class="placeholder">[Host Name]</td>
-              </tr>
-              <tr>
-                <td>Purpose</td>
-                <td class="placeholder">[Purpose]</td>
-              </tr>
-            </tbody>
+  <body id="body" style="margin: 0; padding: 0; background-color: #eceeef; word-spacing: normal">
+    <div style="display: none; max-height: 0; overflow: hidden; mso-hide: all; font-size: 1px; line-height: 1px; color: #eceeef; opacity: 0">
+      Your visit is just around the corner – schedule, travel, safety information and key contacts inside.
+      &#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;
+    </div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#eceeef" style="background-color: #eceeef">
+      <tr>
+        <td align="center" style="padding: 0">
+          <!--[if mso]><table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td><![endif]-->
+          <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="width: 600px; max-width: 600px; background-color: #ffffff; font-family: Montserrat, Arial, sans-serif; font-size: 10px; line-height: 1.52; color: #303b47">
+            <!-- Masthead -->
+            <tr>
+              <td class="px" style="padding: 22px 25px">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td valign="middle">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td width="6" valign="middle" style="width: 6px">
+                            <table role="presentation" width="6" cellpadding="0" cellspacing="0" border="0">
+                              <tr><td height="9" bgcolor="#e2bd50" style="height: 9px; font-size: 9px; line-height: 9px">&nbsp;</td></tr>
+                              <tr><td height="9" bgcolor="#93bb70" style="height: 9px; font-size: 9px; line-height: 9px">&nbsp;</td></tr>
+                              <tr><td height="9" bgcolor="#6ab2c3" style="height: 9px; font-size: 9px; line-height: 9px">&nbsp;</td></tr>
+                              <tr><td height="9" bgcolor="#c85558" style="height: 9px; font-size: 9px; line-height: 9px">&nbsp;</td></tr>
+                            </table>
+                          </td>
+                          <td valign="middle" style="padding-left: 17px; font-family: Montserrat, Arial, sans-serif; font-size: 18px; line-height: 20px; letter-spacing: -0.35px; color: #425a72">
+                            Your Visit at<br /><strong style="font-weight: 700">Hero Future Energies</strong>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td align="right" valign="middle" width="85" style="width: 85px">
+                      <img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/logo.png" width="85" alt="Hero Future Energies" style="display: block; width: 85px; height: auto; font-family: Arial, sans-serif; font-size: 11px; color: #425a72" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Hero -->
+            <tr>
+              <td style="padding: 0">
+                <img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/hero.jpg" width="600" alt="Hero Future Energies energy storage, solar, wind and hydrogen facilities" style="display: block; width: 100%; max-width: 600px; height: auto; background-color: #55728b; font-family: Arial, sans-serif; font-size: 12px; color: #ffffff" />
+              </td>
+            </tr>
+            <!-- Intro -->
+            <tr>
+              <td class="px text-sm" style="padding: 34px 25px 25px; font-family: Montserrat, Arial, sans-serif; font-size: 10px; line-height: 1.52; color: #303b47">
+                <p style="margin: 0 0 17px">Dear [Visitor Name],</p>
+                <p style="margin: 0 0 17px">
+                  Your visit to <em>[Site Name]</em> is just around the corner, and we
+                  are delighted to welcome you. We are pleased to confirm that all
+                  arrangements have been made to ensure a safe, comfortable and engaging
+                  experience.
+                </p>
+                <p style="margin: 0">
+                  This brief contains everything you need to know before your arrival,
+                  including your visit schedule, travel and logistics, site information,
+                  safety guidelines and key contacts.
+                </p>
+              </td>
+            </tr>
+            <!-- Summary (with watermarks either side) -->
+            <tr>
+              <td style="padding: 0">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td class="hide-sm" width="117" valign="bottom" style="width: 117px; vertical-align: bottom">
+                      <img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/wind-watermark.png" width="116" height="121" alt="" style="display: block; width: 116px; height: 121px" />
+                    </td>
+                    <td class="px" align="center" valign="top" style="padding: 0 0 29px">
+                      <table role="presentation" class="fluid" width="365" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="width: 365px; background-color: #ffffff; font-family: Montserrat, Arial, sans-serif; font-size: 10px; line-height: 1.24; color: #303b47">
+                        <tr><td colspan="2" bgcolor="#425a74" style="height: 16px; padding: 4px 12px; background-color: #425a74; color: #ffffff; font-weight: 500" class="text-xs">Visit Summary</td></tr>
+                        <tr><td width="135" style="width: 135px; height: 18px; padding: 3px 12px; border: 1px solid #9caab2" class="text-xs">Date</td><td width="230" style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Date]</td></tr>
+                        <tr><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2" class="text-xs">Site</td><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Site Name]</td></tr>
+                        <tr><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2" class="text-xs">Location</td><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Location]</td></tr>
+                        <tr><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2" class="text-xs">Host</td><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Host Name]</td></tr>
+                        <tr><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2" class="text-xs">Purpose</td><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Purpose]</td></tr>
+                      </table>
+                    </td>
+                    <td class="hide-sm" width="118" valign="bottom" style="width: 118px; vertical-align: bottom">
+                      <img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/brand-watermark.png" width="118" height="61" alt="" style="display: block; width: 118px; height: 61px" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- What to expect -->
+            <tr>
+              <td class="px" bgcolor="#f5f5f5" align="center" style="padding: 27px 25px 18px; background-color: #f5f5f5">
+                <h2 style="margin: 0 0 25px; font-family: Montserrat, Arial, sans-serif; font-size: 12px; line-height: 1.52; letter-spacing: 0.1px; font-weight: 700; color: #425a72">WHAT TO EXPECT</h2>
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-family: Montserrat, Arial, sans-serif; font-size: 9px; line-height: 1.15; color: #344a60">
+                  <tr>
+                    <td class="step" width="16.66%" align="center" valign="top" style="padding: 0 1px"><img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/expect-1-figma.png" width="37" height="37" alt="" style="display: block; margin: 0 auto 8px; width: 37px; height: 37px" />Welcome<br />&amp; Registration</td>
+                    <td class="step" width="16.66%" align="center" valign="top" style="padding: 0 1px"><img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/expect-2-figma.png" width="37" height="37" alt="" style="display: block; margin: 0 auto 8px; width: 37px; height: 37px" />Safety Induction<br />&amp; PPE</td>
+                    <td class="step" width="16.66%" align="center" valign="top" style="padding: 0 1px"><img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/expect-3-figma.png" width="37" height="37" alt="" style="display: block; margin: 0 auto 8px; width: 37px; height: 37px" />Site<br />Introduction</td>
+                    <td class="step" width="16.66%" align="center" valign="top" style="padding: 0 1px"><img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/expect-4-figma.png" width="37" height="37" alt="" style="display: block; margin: 0 auto 8px; width: 37px; height: 37px" />Guided Site<br />Tour</td>
+                    <td class="step" width="16.66%" align="center" valign="top" style="padding: 0 1px"><img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/expect-5-figma.png" width="37" height="37" alt="" style="display: block; margin: 0 auto 8px; width: 37px; height: 37px" />Leadership<br />Interaction</td>
+                    <td class="step" width="16.66%" align="center" valign="top" style="padding: 0 1px"><img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/expect-6-figma.png" width="37" height="37" alt="" style="display: block; margin: 0 auto 8px; width: 37px; height: 37px" />Discussion &amp;<br />Q&amp;A</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Itinerary, travel, weather -->
+            <tr>
+              <td class="px" align="center" style="padding: 30px 0 20px">
+                <table role="presentation" class="fluid" width="365" cellpadding="0" cellspacing="0" border="0" style="width: 365px; margin: 0 auto 12px; font-family: Montserrat, Arial, sans-serif; font-size: 10px; line-height: 1.24; color: #303b47">
+                  <tr><td colspan="2" bgcolor="#425a74" style="height: 16px; padding: 4px 12px; background-color: #425a74; color: #ffffff; font-weight: 500" class="text-xs">Detailed Itinerary</td></tr>
+                  <tr><td width="135" style="width: 135px; height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-weight: 700" class="text-xs">Time</td><td width="230" style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-weight: 700" class="text-xs">Activity</td></tr>
+                  <tr><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Time]</td><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Activity]</td></tr>
+                  <tr><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Time]</td><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Activity]</td></tr>
+                  <tr><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Time]</td><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Activity]</td></tr>
+                  <tr><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Time]</td><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Activity]</td></tr>
+                </table>
+                <table role="presentation" class="fluid" width="365" cellpadding="0" cellspacing="0" border="0" style="width: 365px; margin: 0 auto 12px; font-family: Montserrat, Arial, sans-serif; font-size: 10px; line-height: 1.24; color: #303b47">
+                  <tr><td colspan="2" bgcolor="#425a74" style="height: 16px; padding: 4px 12px; background-color: #425a74; color: #ffffff; font-weight: 500" class="text-xs">Travel &amp; Logistics</td></tr>
+                  <tr><td width="135" style="width: 135px; height: 18px; padding: 3px 12px; border: 1px solid #9caab2" class="text-xs">Pickup Time</td><td width="230" style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Pickup Time]</td></tr>
+                  <tr><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2" class="text-xs">Pickup Location</td><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Pickup Location]</td></tr>
+                  <tr><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2" class="text-xs">Driver</td><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Driver]</td></tr>
+                  <tr><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2" class="text-xs">Vehicle</td><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Vehicle]</td></tr>
+                  <tr><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2" class="text-xs">Hotel</td><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Hotel]</td></tr>
+                </table>
+                <table role="presentation" class="fluid" width="365" cellpadding="0" cellspacing="0" border="0" style="width: 365px; margin: 0 auto 12px; font-family: Montserrat, Arial, sans-serif; font-size: 10px; line-height: 1.24; color: #303b47">
+                  <tr><td colspan="2" bgcolor="#425a74" style="height: 16px; padding: 4px 12px; background-color: #425a74; color: #ffffff; font-weight: 500" class="text-xs">Weather &amp; Connectivity</td></tr>
+                  <tr><td width="135" style="width: 135px; height: 18px; padding: 3px 12px; border: 1px solid #9caab2" class="text-xs">Weather</td><td width="230" style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Weather]</td></tr>
+                  <tr><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2" class="text-xs">Connectivity</td><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Connectivity]</td></tr>
+                  <tr><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2" class="text-xs">Google Maps</td><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs"><a href="[Google Maps Link]" target="_blank" style="color: #285b7c; text-decoration: underline">[Google Maps]</a></td></tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Safety information -->
+            <tr>
+              <td class="px" bgcolor="#9dc36c" align="center" style="padding: 15px 25px 18px; background-color: #9dc36c">
+                <h2 style="margin: 0; font-family: Montserrat, Arial, sans-serif; font-size: 11px; line-height: 17px; font-weight: 700; color: #ffffff">SAFETY INFORMATION</h2>
+              </td>
+            </tr>
+            <tr>
+              <td class="px" background="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/safety-bg.png" bgcolor="#ffffff" valign="top" style="padding: 0 25px 20px; background-color: #ffffff; background-image: url('https://white-board-io.github.io/hff-newsletter/news-letter1/assets/safety-bg.png'); background-repeat: repeat-x; background-position: top left">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-family: Montserrat, Arial, sans-serif; color: #303b47">
+                  <tr>
+                    <td class="stack" width="266" height="177" valign="top" bgcolor="#f4f4f4" style="width: 230px; height: 177px; padding: 17px 18px 16px; background-color: #f4f4f4">
+                      <h3 style="margin: 0 0 13px; font-family: Montserrat, Arial, sans-serif; font-size: 12px; line-height: 1.52; font-weight: 700; color: #445a70">Operational Site</h3>
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-family: Montserrat, Arial, sans-serif; font-size: 9.5px; line-height: 1.4; color: #303b47">
+                        <tr><td width="33" valign="top" style="width: 33px; padding-bottom: 11px"><img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/safety-ppe-figma.png" width="21" height="21" alt="" style="display: block; width: 21px; height: 21px" /></td><td valign="top" class="text-xs" style="padding-bottom: 11px">PPE will be provided upon arrival.</td></tr>
+                        <tr><td width="33" valign="top" style="width: 33px; padding-bottom: 11px"><img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/safety-induction-figma.png" width="21" height="21" alt="" style="display: block; width: 21px; height: 21px" /></td><td valign="top" class="text-xs" style="padding-bottom: 11px">A brief safety induction will be conducted before the site visit.</td></tr>
+                        <tr><td width="33" valign="top" style="width: 33px; padding-bottom: 11px"><img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/safety-photo-figma.png" width="21" height="21" alt="" style="display: block; width: 21px; height: 21px" /></td><td valign="top" class="text-xs" style="padding-bottom: 11px">Photography is permitted at designated viewpoints identified by the site team.</td></tr>
+                        <tr><td width="33" valign="top" style="width: 33px"><img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/safety-stay-figma.png" width="21" height="21" alt="" style="display: block; width: 21px; height: 21px" /></td><td valign="top" class="text-xs">Please remain with your designated host throughout the visit.</td></tr>
+                      </table>
+                    </td>
+                    <td class="stack-gap" width="18" style="width: 18px; font-size: 0; line-height: 0">&nbsp;</td>
+                    <td class="stack" width="266" height="177" valign="top" bgcolor="#f4f4f4" style="width: 230px; height: 177px; padding: 17px 18px 16px; background-color: #f4f4f4">
+                      <h3 style="margin: 0 0 13px; font-family: Montserrat, Arial, sans-serif; font-size: 12px; line-height: 1.52; font-weight: 700; color: #445a70">Project Site</h3>
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-family: Montserrat, Arial, sans-serif; font-size: 9.5px; line-height: 1.4; color: #303b47">
+                        <tr><td width="33" valign="top" style="width: 33px; padding-bottom: 11px"><img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/safety-ppe-figma.png" width="21" height="21" alt="" style="display: block; width: 21px; height: 21px" /></td><td valign="top" class="text-xs" style="padding-bottom: 11px">PPE will be provided upon arrival.</td></tr>
+                        <tr><td width="33" valign="top" style="width: 33px; padding-bottom: 11px"><img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/safety-construction-figma.png" width="21" height="21" alt="" style="display: block; width: 21px; height: 21px" /></td><td valign="top" class="text-xs" style="padding-bottom: 11px">Construction activities may be underway.</td></tr>
+                        <tr><td width="33" valign="top" style="width: 33px; padding-bottom: 11px"><img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/safety-terrain-figma.png" width="21" height="21" alt="" style="display: block; width: 21px; height: 21px" /></td><td valign="top" class="text-xs" style="padding-bottom: 11px">Certain areas may have uneven terrain.</td></tr>
+                        <tr><td width="33" valign="top" style="width: 33px; padding-bottom: 11px"><img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/safety-photo-figma.png" width="21" height="21" alt="" style="display: block; width: 21px; height: 21px" /></td><td valign="top" class="text-xs" style="padding-bottom: 11px">Photography is permitted at designated viewpoints identified by the site team.</td></tr>
+                        <tr><td width="33" valign="top" style="width: 33px"><img src="https://white-board-io.github.io/hff-newsletter/news-letter1/assets/safety-stay-figma.png" width="21" height="21" alt="" style="display: block; width: 21px; height: 21px" /></td><td valign="top" class="text-xs">Please remain within designated visitor areas and follow your host's guidance.</td></tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Contacts -->
+            <tr>
+              <td class="px" align="center" style="padding: 26px 0 12px">
+                <table role="presentation" class="fluid" width="365" cellpadding="0" cellspacing="0" border="0" style="width: 365px; font-family: Montserrat, Arial, sans-serif; font-size: 10px; line-height: 1.24; color: #303b47">
+                  <tr><td colspan="2" bgcolor="#425a74" style="height: 16px; padding: 4px 12px; background-color: #425a74; color: #ffffff; font-weight: 500" class="text-xs">Important Contacts</td></tr>
+                  <tr><td width="135" style="width: 135px; height: 18px; padding: 3px 12px; border: 1px solid #9caab2" class="text-xs">Primary SPOC</td><td width="230" style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Primary SPOC]</td></tr>
+                  <tr><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2" class="text-xs">Site Head</td><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Site Head]</td></tr>
+                  <tr><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2" class="text-xs">Emergency</td><td style="height: 18px; padding: 3px 12px; border: 1px solid #9caab2; font-style: italic" class="text-xs">[Emergency]</td></tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Closing -->
+            <tr>
+              <td class="px text-sm" style="padding: 24px 25px 32px; font-family: Montserrat, Arial, sans-serif; font-size: 10px; line-height: 1.52; color: #303b47">
+                <p style="margin: 0 0 16px">
+                  <strong style="font-weight: 700">Thank you for visiting Hero Future Energies.</strong><br />We
+                  wish you a safe journey and look forward to welcoming you.
+                </p>
+                <p style="margin: 0 0 16px">
+                  Warm regards,<br /><em>[Host Name]</em><br /><em>[Designation]</em>
+                </p>
+              </td>
+            </tr>
+            <!-- Colour strip -->
+            <tr>
+              <td style="padding: 0">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td width="20%" height="10" bgcolor="#d35657" style="height: 10px; font-size: 10px; line-height: 10px">&nbsp;</td>
+                    <td width="20%" height="10" bgcolor="#8bcad6" style="height: 10px; font-size: 10px; line-height: 10px">&nbsp;</td>
+                    <td width="20%" height="10" bgcolor="#465e78" style="height: 10px; font-size: 10px; line-height: 10px">&nbsp;</td>
+                    <td width="20%" height="10" bgcolor="#96bf67" style="height: 10px; font-size: 10px; line-height: 10px">&nbsp;</td>
+                    <td width="20%" height="10" bgcolor="#f0cc65" style="height: 10px; font-size: 10px; line-height: 10px">&nbsp;</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
           </table>
-        </div>
-      </div>
-      <section class="expect">
-        <h2>WHAT TO EXPECT</h2>
-        <div class="expect-grid">
-          <div class="step">
-            <span class="circle"
-              ><img src="assets/expect-1-figma.png" alt="" /></span
-            >Welcome<br />&amp; Registration
-          </div>
-          <div class="step">
-            <span class="circle"
-              ><img src="assets/expect-2-figma.png" alt="" /></span
-            >Safety Induction<br />&amp; PPE
-          </div>
-          <div class="step">
-            <span class="circle"
-              ><img src="assets/expect-3-figma.png" alt="" /></span
-            >Site<br />Introduction
-          </div>
-          <div class="step">
-            <span class="circle"
-              ><img src="assets/expect-4-figma.png" alt="" /></span
-            >Guided Site<br />Tour
-          </div>
-          <div class="step">
-            <span class="circle"
-              ><img src="assets/expect-5-figma.png" alt="" /></span
-            >Leadership<br />Interaction
-          </div>
-          <div class="step">
-            <span class="circle"
-              ><img src="assets/expect-6-figma.png" alt="" /></span
-            >Discussion &amp;<br />Q&amp;A
-          </div>
-        </div>
-      </section>
-      <div class="tables-zone">
-        <div class="table-wrap section-table">
-          <table class="info-table">
-            <thead>
-              <tr>
-                <th colspan="2">Detailed Itinerary</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Time</strong></td>
-                <td><strong>Activity</strong></td>
-              </tr>
-              <tr>
-                <td class="placeholder">[Time]</td>
-                <td class="placeholder">[Activity]</td>
-              </tr>
-              <tr>
-                <td class="placeholder">[Time]</td>
-                <td class="placeholder">[Activity]</td>
-              </tr>
-              <tr>
-                <td class="placeholder">[Time]</td>
-                <td class="placeholder">[Activity]</td>
-              </tr>
-              <tr>
-                <td class="placeholder">[Time]</td>
-                <td class="placeholder">[Activity]</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="table-wrap section-table">
-          <table class="info-table">
-            <thead>
-              <tr>
-                <th colspan="2">Travel &amp; Logistics</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Pickup Time</td>
-                <td class="placeholder">[Pickup Time]</td>
-              </tr>
-              <tr>
-                <td>Pickup Location</td>
-                <td class="placeholder">[Pickup Location]</td>
-              </tr>
-              <tr>
-                <td>Driver</td>
-                <td class="placeholder">[Driver]</td>
-              </tr>
-              <tr>
-                <td>Vehicle</td>
-                <td class="placeholder">[Vehicle]</td>
-              </tr>
-              <tr>
-                <td>Hotel</td>
-                <td class="placeholder">[Hotel]</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="table-wrap section-table">
-          <table class="info-table">
-            <thead>
-              <tr>
-                <th colspan="2">Weather &amp; Connectivity</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Weather</td>
-                <td class="placeholder">[Weather]</td>
-              </tr>
-              <tr>
-                <td>Connectivity</td>
-                <td class="placeholder">[Connectivity]</td>
-              </tr>
-              <tr>
-                <td>Google Maps</td>
-                <td class="placeholder">[Google Maps]</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <section class="safety">
-        <h2>SAFETY INFORMATION</h2>
-        <div class="safety-grid">
-          <div class="safety-card">
-            <h3>Operational Site</h3>
-            <div class="safety-item">
-              <span class="safety-dot" aria-hidden="true"
-                ><img src="assets/safety-ppe-figma.png" alt="" /></span
-              ><span>PPE will be provided upon arrival.</span>
-            </div>
-            <div class="safety-item">
-              <span class="safety-dot" aria-hidden="true"
-                ><img src="assets/safety-induction-figma.png" alt="" /></span
-              ><span
-                >A brief safety induction will be conducted before the site
-                visit.</span
-              >
-            </div>
-            <div class="safety-item">
-              <span class="safety-dot" aria-hidden="true"
-                ><img src="assets/safety-photo-figma.png" alt="" /></span
-              ><span
-                >Photography is permitted at designated viewpoints identified by
-                the site team.</span
-              >
-            </div>
-            <div class="safety-item">
-              <span class="safety-dot" aria-hidden="true"
-                ><img src="assets/safety-stay-figma.png" alt="" /></span
-              ><span
-                >Please remain with your designated host throughout the
-                visit.</span
-              >
-            </div>
-          </div>
-          <div class="safety-card">
-            <h3>Project Site</h3>
-            <div class="safety-item">
-              <span class="safety-dot" aria-hidden="true"
-                ><img src="assets/safety-ppe-figma.png" alt="" /></span
-              ><span>PPE will be provided upon arrival.</span>
-            </div>
-            <div class="safety-item">
-              <span class="safety-dot" aria-hidden="true"
-                ><img src="assets/safety-construction-figma.png" alt="" /></span
-              ><span>Construction activities may be underway.</span>
-            </div>
-            <div class="safety-item">
-              <span class="safety-dot" aria-hidden="true"
-                ><img src="assets/safety-terrain-figma.png" alt="" /></span
-              ><span>Certain areas may have uneven terrain.</span>
-            </div>
-            <div class="safety-item">
-              <span class="safety-dot" aria-hidden="true"
-                ><img src="assets/safety-photo-figma.png" alt="" /></span
-              ><span
-                >Photography is permitted at designated viewpoints identified by
-                the site team.</span
-              >
-            </div>
-            <div class="safety-item">
-              <span class="safety-dot" aria-hidden="true"
-                ><img src="assets/safety-stay-figma.png" alt="" /></span
-              ><span
-                >Please remain within designated visitor areas and follow your
-                host's guidance.</span
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="contacts">
-        <div class="table-wrap section-table">
-          <table class="info-table">
-            <thead>
-              <tr>
-                <th colspan="2">Important Contacts</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Primary SPOC</td>
-                <td class="placeholder">[Primary SPOC]</td>
-              </tr>
-              <tr>
-                <td>Site Head</td>
-                <td class="placeholder">[Site Head]</td>
-              </tr>
-              <tr>
-                <td>Emergency</td>
-                <td class="placeholder">[Emergency]</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-      <div class="closing">
-        <p>
-          <strong>Thank you for visiting Hero Future Energies.</strong><br />We
-          wish you a safe journey and look forward to welcoming you.
-        </p>
-        <p>
-          Warm regards,<br /><em>[Host Name]</em><br /><em>[Designation]</em>
-        </p>
-      </div>
-      <div class="color-strip" aria-hidden="true">
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </main>
+          <!--[if mso]></td></tr></table><![endif]-->
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
